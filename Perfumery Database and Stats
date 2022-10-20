@@ -1,0 +1,30 @@
+Create a Perfumery database
+CREATE TABLE Store (PerfumeID integer, Item text, Note text, Season text, Price integer);
+
+INSERT INTO Store values (01, "001", "Musk", "Fall", 59);
+INSERT INTO store values (02, "002", "Orange Blossom", "Summer", 36);
+INSERT INTO Store values (03, "003", "Vanilla", "Winter", 40);
+INSERT INTO Store values (04, "004", "Jasmine", "Summer", 34);
+INSERT INTO Store values (05, "005", "Juniper", "Winter", 38);
+
+INSERT INTO Store values (06, "006", "Tabacco", "Fall", 42);
+INSERT INTO store values (07, "007", "White Flower", "Spring", 36);
+INSERT INTO Store values (08, "008", "Marshmellow", "Spring", 46);
+INSERT INTO Store values (09, "009", "Lemon", "Summer", 32);
+INSERT INTO Store values (10, "010", "Cardomon", "Winter", 45);
+
+INSERT INTO Store values (11, "011", "Raspberry", "Summer", 42);
+INSERT INTO store values (12, "012", "Cedar", "Winter", 36);
+INSERT INTO Store values (13, "013", "Patchouli", "Fall", 32);
+INSERT INTO Store values (14, "014", "Lilac", "Summer", 45);
+INSERT INTO store values (15, "015", "Tonka Bean", "Winter", 46);
+SELECT * FROM Store;
+
+--display the database ordered by price.
+SELECT * FROM Store 
+ORDER BY Price asc;
+
+--how many of each seasonal item is carried
+SELECT Season, COUNT(season) FROM store 
+GROUP BY Season 
+ORDER BY COUNT(Season) asc;
